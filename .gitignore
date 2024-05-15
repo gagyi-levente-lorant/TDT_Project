@@ -1,0 +1,41 @@
+# Selenium WebDriver files
+webdriver.log
+geckodriver.log
+chromedriver.log
+operadriver.log
+IEDriverServer.log
+microsoftwebdriver.log
+
+# WebDriver binary files
+webdriver/*/*
+
+# IDE specific files
+.idea/
+*.iml
+*.ipr
+*.iws
+*.classpath
+*.project
+
+# Maven specific files
+target/
+
+# Eclipse specific files
+.settings/
+
+# NetBeans specific files
+nbproject/private/
+build/
+
+# Intellij specific files
+*.iml
+*.iws
+*.ipr
+.idea/
+
+# Gradle specific files
+.gradle/
+build/
+
+# TestNG specific files
+test-output/
