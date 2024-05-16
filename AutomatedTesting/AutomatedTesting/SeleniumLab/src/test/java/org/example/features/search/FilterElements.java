@@ -5,6 +5,7 @@ import net.thucydides.core.annotations.Issue;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
 import org.example.steps.serenity.EndUserStepsEmagFilter;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
@@ -18,7 +19,10 @@ public class FilterElements {
 
     @Steps
     public EndUserStepsEmagFilter mark;
-
+    @Before
+    public void setUp() {
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\stefa\\Desktop\\ss\\chromedriver.exe");
+    }
 
     @Issue("#EMAG-FILTER")
     @Test

@@ -5,6 +5,7 @@ import net.thucydides.core.annotations.Issue;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
 import org.example.steps.serenity.EndUserStepsEmagFavourite;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
@@ -13,6 +14,11 @@ import java.util.Arrays;
 
 @RunWith(SerenityRunner.class)
 public class PutElementInFavourite {
+
+    @Before
+    public void setUp() {
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\stefa\\Desktop\\ss\\chromedriver.exe");
+    }
 
     @Managed(uniqueSession = true)
     public WebDriver webdriver;
