@@ -73,12 +73,12 @@ public class EmagCartPage extends PageObject {
         }
     }
 
-    public List<String> getFavouriteItems(){
+    public List<String> getCartItems(){
         WebElement itemList = getDriver().findElement(By.id("cart-products"));
         return itemList.findElements(By.tagName("a")).stream().map(element -> element.getText()).collect(Collectors.toList());
     }
 
-    public String get_empty_favourites(){
+    public String get_empty_cart(){
         WebElement noProductElement = getDriver().findElement(By.id("cart-products"));
         return noProductElement.getText();
     }
