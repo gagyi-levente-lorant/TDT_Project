@@ -37,7 +37,7 @@ public class PutElementInCart {
     public EmagCartPage emagCartPage;
     @Issue("#Emag-Cart")
     @Test
-    public void search_and_favourite_s24() {
+    public void search_and_cart_s24() {
         user.is_the_home_page();
         user.looks_for("s24");
         user.add_item_to_cart();
@@ -50,7 +50,7 @@ public class PutElementInCart {
     }
 
     @Test
-    public void search_and_favourite_s24_invalid() {
+    public void search_and_cart_s24_invalid() {
         user.is_the_home_page();
         user.looks_for("iphone 15");
         user.add_item_to_cart();
@@ -59,7 +59,7 @@ public class PutElementInCart {
     }
 
     @Test
-    public void search_and_favourite_s24_and_iphone_valid() {
+    public void search_and_cart_s24_and_iphone_valid() {
         user.is_the_home_page();
         user.looks_for("iphone 13");
         user.add_item_to_cart();
@@ -70,7 +70,7 @@ public class PutElementInCart {
     }
 
     @Test
-    public void search_and_favourite_s24_and_iphone_invalid() {
+    public void search_and_cart_s24_and_iphone_invalid() {
         user.is_the_home_page();
         user.looks_for("iphone 13");
         user.add_item_to_cart();
@@ -81,7 +81,7 @@ public class PutElementInCart {
     }
 
     @Test
-    public void favourites_are_empty() {
+    public void cart_is_empty() {
         user.is_the_home_page();
         user.goto_cart();
         user.should_be_empty();
