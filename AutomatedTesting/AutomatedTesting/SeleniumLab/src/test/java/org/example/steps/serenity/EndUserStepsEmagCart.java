@@ -44,7 +44,7 @@ public class EndUserStepsEmagCart {
     @Step
     public void contains_multiple_item(List<String> nameList) {
 
-        List<String> listItems = dictionaryPage.getFavouriteItems();
+        List<String> listItems = dictionaryPage.getCartItems();
         for (String name: nameList) {
             assertThat(listItems, hasItem(containsString(name)));
         }
@@ -54,7 +54,7 @@ public class EndUserStepsEmagCart {
     @Step
     public void contains_multiple_item_invalid(List<String> nameList) {
 
-        List<String> listItems = dictionaryPage.getFavouriteItems();
+        List<String> listItems = dictionaryPage.getCartItems();
         boolean atLeastOneNotFound = false;
 
         for (String name : nameList) {
@@ -70,7 +70,7 @@ public class EndUserStepsEmagCart {
     @Step
     public void should_be_empty() {
         String expectedText = "Cosul meu\nCosul tau de cumparaturi nu contine produse. Pentru a adauga produse in cos te rugam sa te intorci in magazin.";
-        String emptyText = dictionaryPage.get_empty_favourites();
+        String emptyText = dictionaryPage.get_empty_cart();
 
         // Remove all non-alphanumeric characters and convert to lowercase
         expectedText = removeNonAlphanumeric(expectedText).toLowerCase();
